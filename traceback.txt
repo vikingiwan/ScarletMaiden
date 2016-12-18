@@ -1,0 +1,31 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 63, in script
+    stop musid fadeout 1
+  File "renpy/common/000statements.rpy", line 203, in execute_stop_music
+    renpy.music.stop(fadeout=eval(p["fadeout"]), channel=channel)
+Exception: Audio channel u'musid' is unknown.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 63, in script
+    stop musid fadeout 1
+  File "C:\Users\vikin\Documents\renpy-6.99.8-sdk\renpy\ast.py", line 1696, in execute
+    self.call("execute")
+  File "C:\Users\vikin\Documents\renpy-6.99.8-sdk\renpy\ast.py", line 1714, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\vikin\Documents\renpy-6.99.8-sdk\renpy\statements.py", line 144, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 203, in execute_stop_music
+    renpy.music.stop(fadeout=eval(p["fadeout"]), channel=channel)
+  File "C:\Users\vikin\Documents\renpy-6.99.8-sdk\renpy\audio\music.py", line 221, in stop
+    c = get_channel(channel)
+  File "C:\Users\vikin\Documents\renpy-6.99.8-sdk\renpy\audio\audio.py", line 602, in get_channel
+    raise Exception("Audio channel %r is unknown." % name)
+Exception: Audio channel u'musid' is unknown.
+
+Windows-8-6.2.9200
+Ren'Py 6.99.8.959
+Scarlet Maiden 0.1
