@@ -25,6 +25,11 @@ image ak_embarrassed = "res/characters/Akane/Akane_Embarrassed.png"
 #Kurukato
 image k_happy = "res/characters/Kurukato/Kurukato_happy.png"
 image k_worried = "res/characters/Kurukato/Kurukato_worried.png"
+image k_blush = "res/characters/Kurukato/Kurukato_blush.png"
+image k_happy2 = "res/characters/Kurukato/Kurukato_happy2.png"
+image k_serious = "res/characters/Kurukato/Kurukato_serious.png"
+image k_sad = "res/characters/Kurukato/Kurukato_sad.png"
+image k_surprised = "res/characters/Kurukato/Kurukato_surprised.png"
 
 ##Colors:
 image black = "#000000"
