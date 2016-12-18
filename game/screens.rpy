@@ -172,7 +172,7 @@ screen nvl(dialogue, items=None):
 screen main_menu:
     tag menu # This ensures that any other menu screen is replaced.
     # begin-end comments like the one in the next line are used to display code examples in the game
-    add "res/gui/Main_Menu.jpg" # Add a background image for the main menu.
+    add "res/gui/Main_Menu_indev.jpg" # Add a background image for the main menu.
     $ x=100 # To make things easier, we define a variable y and use it to set positions for our imagebuttons
     imagebutton auto "res/gui/button_start_%s.png" ypos 550 xpos x focus_mask True action Start() at main_eff1
     
