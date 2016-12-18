@@ -1,6 +1,5 @@
-﻿# You can place the script of your game in this file.
-init:
-    ###Characters:
+﻿init:
+##Characters:
     
     #Akane
     $ a = Character(_('Akane'),
@@ -18,26 +17,22 @@ init:
                     what_slow_cps=50,
                     ctc=anim.Blink("res/arrow.png"))
 
-                    
-                    
-
-###IMAGES
-
-#Colors:
-image black = "#000000"
-image white = "#FFFFFF"
-
-##Characters:
+##Character Images:
+#Akane
 image ak_vhappy = "res/characters/Akane/Akane_VeryHappy.png"
 image ak_surprised = "res/characters/Akane/Akane_Surprised.png"
+image ak_embarrassed = "res/characters/Akane/Akane_Embarrassed.png"
+#Kurukato
+image k_happy = "res/characters/Kurukato/Kurukato_happy.png"
+image k_worried = "res/characters/Kurukato/Kurukato_worried.png"
+
+##Colors:
+image black = "#000000"
+image white = "#FFFFFF"
 
 ##Backgrounds
 image bg_cherryblossomdojo = "res/bg/cherryblossomdojo.jpg"
 image bg_akanebedroom = "res/bg/akanebedroom.png"
-
-# Declare characters used by this game.
-define e = Character('Eileen', color="#c8ffc8")
-#define ak = Character('Akane', color="#a6a6a6")
 
 # The game starts here.
 label start:
@@ -59,7 +54,23 @@ label start:
    a "....."
    a ".........."
    a "K-Kurukato? Is that you?"
-   scene black with Dissolve (3)
+   scene bg_akanebedroom
+   show k_happy with Dissolve (.5)
+   k "Who else would it be?"
    stop music fadeout 1
-   pause (1)
+   scene black with Dissolve (1)
+   play music "res/music/lighthearted.ogg" fadein (.5)
+   scene bg_cherryblossomdojo with Dissolve(1)
+   show k_worried with Dissolve (.5)
+   k "I really hope we'll make it to school on time. You remember what happened last time we were late, don't you?"
+   scene bg_cherryblossomdojo
+   show ak_embarrassed
+   a "Don't remind me..."
+   jump endoftest
+
+label endoftest:
+   stop music fadeout 3
+   scene black with Dissolve (3)
+   centered "*END OF TEST*"
+#   pause (1)
    return
