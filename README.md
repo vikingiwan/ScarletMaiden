@@ -1,6 +1,4 @@
 #SCARLET MAIDEN
-----
-
 ###A Yandere-themed Visual Novel built on the Ren'Py Engine
 ----
 
@@ -11,5 +9,4 @@
 ```
 Yandere definition: http://www.yourdictionary.com/yandere
 ````
-----
 >"Of course I know what i'm doing..." -VikingIwan
